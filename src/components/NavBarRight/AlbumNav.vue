@@ -16,7 +16,7 @@ export default {
 
 #album-nav {
     width: 100%;
-    height: calc(100% - 280px);
+    height: calc(100% - 330px);
     overflow-y: auto;
 }
 </style>

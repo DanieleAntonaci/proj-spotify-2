@@ -44,6 +44,20 @@ export default {
 
         </li>
     </ul>
+    <ul class="create-playlist">
+        <li>
+            <a href="#">
+                <font-awesome-icon class="icon" icon="fa-solid fa-square-plus" />
+                Crea playlist
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <font-awesome-icon class="icon heart" icon="fa-solid fa-heart" />
+                Brani che ti piacciono
+            </a>
+        </li>
+    </ul>
   </div>
 </template>
 
@@ -52,7 +66,7 @@ export default {
 @use '../../style/partials/variables' as *;
 
 #my-menu {
-    height: 250px;
+    height: 300px;
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -80,12 +94,13 @@ export default {
 
 
             a {
-                opacity: .5;
+                opacity: .55;
                 transition: opacity .3s ease;
+                font-size: 14px;
 
                 .icon {
                     vertical-align: middle;
-                    padding-right: 14px;
+                    margin-right: 14px;
                     font-size: 22px;
                 }
             }
@@ -94,6 +109,21 @@ export default {
             a:hover {
                 opacity: 1;
             }
+        }
+    }
+
+    .create-playlist {
+        padding: 0;
+
+        .icon {
+            font-size: 29px;
+        }
+
+        .icon.heart {
+            font-size: 12px;
+            border-radius: 3px;
+            background: linear-gradient(.35turn, #3d1ea9, 60%, rgb(255, 255, 255));
+            padding: 7px;
         }
     }
 }
