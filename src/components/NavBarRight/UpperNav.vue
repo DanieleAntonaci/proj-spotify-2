@@ -89,7 +89,7 @@ export default {
         padding: 20px 0;
 
         li {
-            padding: 7px 0;
+            padding: 8px 0;
 
 
 
@@ -116,7 +116,7 @@ export default {
         padding: 0;
 
         .icon {
-            font-size: 29px;
+            font-size: 28px;
         }
 
         .icon.heart {

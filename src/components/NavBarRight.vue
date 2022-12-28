@@ -15,7 +15,8 @@ export default {
     <UpperNav/>
     <AlbumNav/>
     <div id="install-app">
-      install
+      <font-awesome-icon class="icon" icon="fa-regular fa-circle-down" />
+      Istalla app
     </div>
   </div>
 </template>
@@ -32,7 +33,16 @@ export default {
 
   #install-app {
     width: 100%;
-    height: 30px;
+    height: 33px;
+    padding: 6px 0;
+    font-size: 13px;
+    opacity: .8;
+
+    .icon {
+      font-size: 20px;
+      padding-right: 10px;
+      vertical-align: middle;
+    }
   }
 }
 </style>
