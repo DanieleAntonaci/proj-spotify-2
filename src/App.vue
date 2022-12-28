@@ -1,5 +1,5 @@
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import Main from './components/Main.vue';
 import Player from './components/Player.vue';
 export default {
   data() {
@@ -7,19 +7,21 @@ export default {
 
     }
   }, components: {
-    HelloWorld,
-    Player
+    Player,
+    Main
   }
 }
 </script>
 
 <template>
   <div>
-    <HelloWorld/>
+    <Main/>
     <Player/>
   </div>
 </template>
 
 <style lang="scss">
-
+@use './style/generals.scss' as *;
+@use './style/partials/mixin' as *;
+@use './style/partials/variables' as *;
 </style>

@@ -5,7 +5,7 @@ export default {
 </script>
 
 <template>
-  <div id="player">
+  <div id="songs">
 
   </div>
 </template>
@@ -14,8 +14,10 @@ export default {
 @use '../style/partials/mixin' as *;
 @use '../style/partials/variables' as *;
 
-#player {
-  background-color: #181818;
-  min-height: 100px;
+#songs {
+  background-color: #121212;
+  height: 100%;
+  width: calc(100% - 400px);
+  overflow-y: auto;
 }
 </style>
