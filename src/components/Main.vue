@@ -3,18 +3,18 @@ import NavBarRight from './NavBarRight.vue';
 import SongsSection from './SongsSection.vue'
 
 export default {
-    components: {
-        NavBarRight,
-        SongsSection
-    }
+  components: {
+    NavBarRight,
+    SongsSection
+  }
 }
 </script>
 
 <template>
-  <div id="main">
+  <main id="main">
     <NavBarRight/>
     <SongsSection/>
-  </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
@@ -22,9 +22,9 @@ export default {
 @use '../style/partials/variables' as *;
 
 #main {
-    background-color: blue;
-    height: calc(100vh - 100px);
-    display: flex;
+  background-color: blue;
+  height: calc(100vh - 100px);
+  display: flex;
 
 }
 </style>

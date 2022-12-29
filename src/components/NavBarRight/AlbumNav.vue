@@ -89,7 +89,13 @@ export default {
 #album-nav {
     width: 100%;
     height: calc(100% - 333px);
-    overflow-y: auto;
+    overflow-y: hidden;
+
+
+    &:hover {
+        overflow-y: scroll;
+
+    }
 
 
     ul {

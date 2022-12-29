@@ -1,12 +1,14 @@
 <script>
-export default {
+import UpMainMyPlaylist from './SongsLeft/UpMainMyPlaylist.vue';
 
+export default {
+  components: { UpMainMyPlaylist }
 }
 </script>
 
 <template>
   <div id="songs">
-
+    <UpMainMyPlaylist/>
   </div>
 </template>
 
