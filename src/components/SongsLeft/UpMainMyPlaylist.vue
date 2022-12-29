@@ -1,6 +1,8 @@
 <script>
-export default {
+import RecentlyListen from './RecentlyListen.vue';
 
+export default {
+    components: { RecentlyListen }
 }
 </script>
 
@@ -17,6 +19,7 @@ export default {
             <font-awesome-icon class="arrow-down" icon="fa-solid fa-caret-down" />
         </div>
     </div>
+    <RecentlyListen/>
   </div>
 </template>
 
