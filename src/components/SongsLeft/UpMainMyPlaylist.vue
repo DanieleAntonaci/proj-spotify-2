@@ -33,6 +33,8 @@ export default {
     background: linear-gradient(#1b0d4d 20%, #121212 100%);
 
     #my-account {
+        height: 50px;
+
         display: flex;
         justify-content: space-between;
 
@@ -52,6 +54,7 @@ export default {
             background-color: #000;
 
             width: 150px;
+            height: 35px;
             border-radius: 30px;
 
             display: flex;
