@@ -35,6 +35,8 @@ export default {
     #my-account {
         height: 50px;
 
+        position: sticky;
+
         display: flex;
         justify-content: space-between;
 

@@ -1,6 +1,6 @@
 <script>
-import UpperNav from './NavBarRight/UpperNav.vue';
-import AlbumNav from './NavBarRight/AlbumNav.vue';
+import UpperNav from './NavLeft/UpperNav.vue';
+import AlbumNav from './NavLeft/AlbumNav.vue';
 
 export default {
   components: {

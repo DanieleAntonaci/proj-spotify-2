@@ -1,10 +1,10 @@
 <script>
-import NavBarRight from './NavBarRight.vue';
+import NavBarLeft from './NavBarLeft.vue';
 import SongsSection from './SongsSection.vue'
 
 export default {
   components: {
-    NavBarRight,
+    NavBarLeft,
     SongsSection
   }
 }
@@ -12,7 +12,7 @@ export default {
 
 <template>
   <main id="main">
-    <NavBarRight/>
+    <NavBarLeft/>
     <SongsSection/>
   </main>
 </template>

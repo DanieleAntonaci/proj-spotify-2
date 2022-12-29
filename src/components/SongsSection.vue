@@ -1,5 +1,5 @@
 <script>
-import UpMainMyPlaylist from './SongsLeft/UpMainMyPlaylist.vue';
+import UpMainMyPlaylist from './SongsRight/UpMainMyPlaylist.vue';
 
 export default {
   components: { UpMainMyPlaylist }
@@ -9,6 +9,9 @@ export default {
 <template>
   <div id="songs">
     <UpMainMyPlaylist/>
+    <div class="c">
+      s
+    </div>
   </div>
 </template>
 

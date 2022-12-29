@@ -72,12 +72,13 @@ export default {
 .cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     padding-top: 20px;
 
     .card {
         height: 80px;
-        width: calc((100% / 3) - 30px);
-        margin: 15px;
+        width: calc((100% / 3) - 20px);
+        margin-bottom: 20px;
         background-color: #31373e;
 
         display: flex;
