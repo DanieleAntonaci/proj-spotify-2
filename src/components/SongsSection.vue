@@ -1,17 +1,16 @@
 <script>
+import RowCardsSongs from './SongsRight/RowCardsSongs.vue';
 import UpMainMyPlaylist from './SongsRight/UpMainMyPlaylist.vue';
 
 export default {
-  components: { UpMainMyPlaylist }
+  components: { UpMainMyPlaylist, RowCardsSongs }
 }
 </script>
 
 <template>
   <div id="songs">
     <UpMainMyPlaylist/>
-    <div class="c">
-      s
-    </div>
+    <RowCardsSongs/>
   </div>
 </template>
 
