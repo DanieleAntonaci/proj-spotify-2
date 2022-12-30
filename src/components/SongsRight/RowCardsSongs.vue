@@ -8,28 +8,21 @@ export default {
     components: { CardSong },
     data() {
         return {
-            store
+            store,
+            artists: [
+                'Sheeran',
+                'AC DC',
+                'linkin park',
+
+            ],
         }
-    }, methods: {
-        getPlaylist() {
-            axios.get(store.apiLink).then(
-                res => {
-                    store.songs = res.data.tracks.hits
-                    store.artist = res.data.artists.hits[0].artist.name
-                    console.log(store.songs);
-                }
-            )
-        }
-    },
-    mounted() {
-        this.getPlaylist()
     },
 }
 </script>
 
 <template>
-    <div >
-        <CardSong/>
+    <div v-for="(element, index) in artists">
+        <CardSong :artist="element" :numList="index"/>
     </div>
 </template>
 
