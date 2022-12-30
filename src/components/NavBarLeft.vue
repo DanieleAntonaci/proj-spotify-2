@@ -30,6 +30,7 @@ export default {
   height: 100%;
   width: 400px;
   padding: 15px 25px 0;
+  overflow-y: hidden;
 
   #install-app {
     width: 100%;

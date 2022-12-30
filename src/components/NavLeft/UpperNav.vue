@@ -1,4 +1,6 @@
 <script>
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
 export default {
     data() {
         return {
@@ -36,7 +38,7 @@ export default {
 
     <ul>
         <li v-for="(element, index) in navigationMenu" >
-            <a :href="element.link" class="my-nav" :class="index === activeItem ? 'focus' : ''">
+            <a :href="element.link" class="my-nav" :class="index === activeItem ? 'focus' : ''" >
                 <font-awesome-icon class="icon" :icon="'fa-solid ' + element.icon"/>
                 {{ element.name }}
 
