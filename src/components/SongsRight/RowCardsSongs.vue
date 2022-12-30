@@ -16,13 +16,31 @@ export default {
 
             ],
         }
+    }, methods: {
+        getPlaylist() {
+            for (let i = 0; i < this.artists.length; i++) {
+                let artist = this.artists[i]
+                console.log(artist);
+                let apiArtist = store.apiLink + artist;
+
+                axios.get(apiArtist).then(
+                    res => {
+                        store.songs.push({ name: res.data.artists.hits[0].artist.name, songs: res.data.tracks.hits });
+                    }
+                )
+            }
+            console.log(store.songs);
+        }
+    },
+    mounted() {
+        this.getPlaylist()
     },
 }
 </script>
 
 <template>
-    <div v-for="(element, index) in artists">
-        <CardSong :artist="element" :numList="index"/>
+    <div>
+        <CardSong :artistAndSongs="store.songs"/>
     </div>
 </template>
 

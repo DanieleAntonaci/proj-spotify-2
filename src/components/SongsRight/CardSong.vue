@@ -3,42 +3,23 @@ import { store } from '../../store';
 import axios from 'axios';
 export default {
     props: {
-        artist: String,
-        numList: Number
+        artistAndSongs: Object,
     },
     data() {
         return {
             store,
-            // artist: 'Sheeran',
         }
-    }, methods: {
-        getPlaylist() {
-            let apiArtist = `${store.apiLink}+${this.artist}`
-            axios.get(apiArtist).then(
-                res => {
-
-                    let infoSong = [];
-
-                    infoSong.push(res.data.artists.hits[0].artist.name, res.data.tracks.hits);
-                    store.songs.push(infoSong);
-                    console.log(store.songs);
-                }
-            )
-        }
-    },
-    mounted() {
-        this.getPlaylist()
     },
 }
 </script>
 
 <template>
-    <div class="cards">
-        <h1> {{ store.songs[numList][0] }} </h1>
+    <div class="cards" v-for="(element, index) in artistAndSongs">
+        <h1> {{ element.name }} </h1>
 
         <div class="row">
 
-            <div class="card" v-for="song in store.songs[numList][1]">
+            <div class="card" v-for="song in element.songs">
                 <div class="img-song">
                     <img :src="song.track.share.image" :alt="song.track.title">
                     <font-awesome-icon class='play' icon="fa-solid fa-circle-play" />
