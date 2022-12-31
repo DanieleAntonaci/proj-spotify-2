@@ -49,7 +49,7 @@ export default {
         justify-content: space-between;
 
         .card {
-            width: calc(100% / 6 - 20px);
+            width: calc(100% / 5 - 20px);
             padding: 20px;
             background-color: #171717;
 
@@ -74,11 +74,12 @@ export default {
                     bottom: 0;
                     right: 0;
                     transform: translate(-25%, -25%);
-                    color: greenyellow;
-                    font-size: 45px;
+                    color: #1ed760;
+                    font-size: 40px;
                     background-color: #171717;
                     border-radius: 50%;
                     display: none;
+
                 }
 
             }
