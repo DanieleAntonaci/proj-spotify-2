@@ -1,6 +1,6 @@
 <script>
 import { store } from '../../store';
-import axios from 'axios';
+
 export default {
     props: {
         artistAndSongs: Object,
@@ -9,20 +9,35 @@ export default {
         return {
             store,
         }
+    }, methods: {
+        onPlaySong(numAutor, numSong) {
+            let reproducedAuthor = numAutor
+            let reproducedSong = numSong
+            let nameSong = store.songs[reproducedAuthor].songs[reproducedSong].track.title;
+            let imgSong = store.songs[reproducedAuthor].songs[reproducedSong].track.share.image;
+            let nameAutor = store.songs[reproducedAuthor].name;
+            store.listenedSong = nameSong;
+            store.imageSong = imgSong;
+            store.listenedAutor = nameAutor;
+            store.numSong = numSong;
+            store.numAutor = numAutor;
+            console.log(imgSong);
+        }
     },
 }
 </script>
 
 <template>
-    <div class="cards" v-for="(element, index) in artistAndSongs">
+    <div class="cards" v-for="(element, index) in artistAndSongs" :key="index">
         <h1> {{ element.name }} </h1>
 
         <div class="row">
 
-            <div class="card" v-for="song in element.songs">
+            <div class="card" v-for="(song, num) in element.songs">
                 <div class="img-song">
                     <img :src="song.track.share.image" :alt="song.track.title">
-                    <font-awesome-icon class='play' icon="fa-solid fa-circle-play" />
+                    <font-awesome-icon class='play' icon="fa-solid fa-circle-play" @click="onPlaySong(index, num)"/>
+                    <font-awesome-icon icon="fa-solid fa-circle-pause" class='play pause-icon' v-if="store.listenedSong != '' && num === store.numSong && index === store.numAutor"/>
                 </div>
                 <h3>{{ song.track.title }}</h3>
                 <h4>{{ song.track.subtitle }}</h4>
@@ -80,6 +95,10 @@ export default {
                     border-radius: 50%;
                     display: none;
 
+                }
+
+                .play.pause-icon {
+                    display: inline;
                 }
 
             }

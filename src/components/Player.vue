@@ -1,12 +1,16 @@
 <script>
-export default {
+import SongPlayed from './player/SongPlayed.vue';
 
+export default {
+  components: {
+    SongPlayed
+  }
 }
 </script>
 
 <template>
   <div id="player">
-
+    <SongPlayed/>
   </div>
 </template>
 
@@ -16,6 +20,6 @@ export default {
 
 #player {
   background-color: #181818;
-  min-height: 100px;
+  height: 100px;
 }
 </style>

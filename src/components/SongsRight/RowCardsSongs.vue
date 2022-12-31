@@ -15,6 +15,7 @@ export default {
                 'linkin park',
 
             ],
+
         }
     }, methods: {
         getPlaylist() {
@@ -25,7 +26,11 @@ export default {
 
                 axios.get(apiArtist).then(
                     res => {
-                        store.songs.push({ name: res.data.artists.hits[0].artist.name, songs: res.data.tracks.hits });
+                        store.songs.push({
+                            name: res.data.artists.hits[0].artist.name,
+                            songs: res.data.tracks.hits,
+                            positionArtist: i
+                        });
                     }
                 )
             }
