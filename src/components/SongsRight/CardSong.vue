@@ -37,7 +37,7 @@ export default {
                 <div class="img-song">
                     <img :src="song.track.share.image" :alt="song.track.title">
                     <font-awesome-icon class='play' icon="fa-solid fa-circle-play" @click="onPlaySong(index, num)"/>
-                    <font-awesome-icon icon="fa-solid fa-circle-pause" class='play pause-icon' v-if="store.listenedSong != '' && num === store.numSong && index === store.numAutor"/>
+                    <font-awesome-icon icon="fa-solid fa-circle-pause" class='play pause-icon' v-if="store.listenedSong != '' && num === store.numSong && index === store.numAutor" />
                 </div>
                 <h3>{{ song.track.title }}</h3>
                 <h4>{{ song.track.subtitle }}</h4>

@@ -32,7 +32,7 @@ export default {
     display: flex;
     align-items: center;
 
-    max-width: 400px;
+    width: 25%;
     height: 100%;
 
     img {

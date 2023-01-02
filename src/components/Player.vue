@@ -1,9 +1,11 @@
 <script>
 import SongPlayed from './player/SongPlayed.vue';
+import SongControl from './player/SongControl.vue';
 
 export default {
   components: {
-    SongPlayed
+    SongPlayed,
+    SongControl
   }
 }
 </script>
@@ -11,6 +13,7 @@ export default {
 <template>
   <div id="player">
     <SongPlayed/>
+    <SongControl/>
   </div>
 </template>
 
@@ -21,5 +24,7 @@ export default {
 #player {
   background-color: #181818;
   height: 100px;
+
+  display: flex;
 }
 </style>

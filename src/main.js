@@ -9,7 +9,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 /* import specific icons */
-import { faAngleLeft, faAngleRight, faCaretDown, faChartSimple, faCirclePause, faCirclePlay, faHeart, faHouse, faMagnifyingGlass, faPlay, faPlus, faSquarePlus, faUserSecret } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faBackwardStep, faCaretDown, faChartSimple, faCircle, faCirclePause, faCirclePlay, faForwardStep, faHeart, faHouse, faMagnifyingGlass, faPlay, faPlus, faRepeat, faShuffle, faSquarePlus, faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faCircleDown as fasCircleDown, faHeart as fasHeart } from '@fortawesome/free-regular-svg-icons'
 import { faSpotify } from '@fortawesome/free-brands-svg-icons'
 
@@ -29,7 +29,12 @@ library.add(
     faCaretDown,
     faCirclePlay,
     fasHeart,
-    faCirclePause
+    faCirclePause,
+    faShuffle,
+    faBackwardStep,
+    faForwardStep,
+    faRepeat,
+    faCircle
 )
 
 createApp(App)
