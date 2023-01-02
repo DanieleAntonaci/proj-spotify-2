@@ -66,7 +66,8 @@ export default {
 
         #bar-song {
             width: 60%;
-            height: 3px;
+            height: 4px;
+            border-radius: 5px;
             background-color: gray;
             margin: 0 15px;
 
@@ -75,6 +76,7 @@ export default {
                 width: 40%;
                 height: 100%;
                 position: relative;
+                border-radius: 5px 0 0 5px;
 
                 #pointer {
                     position: absolute;
@@ -89,7 +91,7 @@ export default {
         }
 
         &:hover #bar-song #bar-listen {
-            background-color: greenyellow;
+            background-color: #1db954;
 
             #pointer {
                 display: inline;

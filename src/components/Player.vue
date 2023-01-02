@@ -1,11 +1,13 @@
 <script>
 import SongPlayed from './player/SongPlayed.vue';
 import SongControl from './player/SongControl.vue';
+import VolumeSong from './player/VolumeSong.vue'
 
 export default {
   components: {
     SongPlayed,
-    SongControl
+    SongControl,
+    VolumeSong
   }
 }
 </script>
@@ -14,6 +16,7 @@ export default {
   <div id="player">
     <SongPlayed/>
     <SongControl/>
+    <VolumeSong/>
   </div>
 </template>
 
